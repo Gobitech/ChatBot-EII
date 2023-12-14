@@ -6,9 +6,8 @@ from datetime import timedelta
 
 #####################get data from getinfo file################
 import getinfo
-
 # import stockinfo
-import coffeeinfo
+# import coffeeinfo
 import gasinfo
 import curprice
 import goldinfo
@@ -20,7 +19,7 @@ import termsdata
 terms = termsdata
 data = getinfo
 # stock = stockinfo
-coffee = coffeeinfo
+# coffee = coffeeinfo
 gas = gasinfo
 price = curprice
 gold = goldinfo
@@ -62,16 +61,16 @@ today = get_today()
 
 
 #######################Analyse######################
-# stock
+# # stock
 # stock_analyse = {
 #     "Stock_daily_analy": stock.stock_daily_analise(),
 #     "stock_weekly_analy": stock.stock_weekly_analise(),
 # }
-# coffee
-coffee_analyse = {
-    "price_coffee_detail": coffee.coffee_daily_price(True),
-    "price_cofffee_summary": coffee.coffee_daily_price(False),
-}
+# # coffee
+# coffee_analyse = {
+#     "price_coffee_detail": coffee.coffee_daily_price(True),
+#     "price_cofffee_summary": coffee.coffee_daily_price(False),
+# }
 # gold
 gold_analyse = {
     "price_gold_detail": gold.gold_daily_price(True),
@@ -86,7 +85,7 @@ meat_analyse = {
 
 #######################Price######################
 # coffee
-coffee_name, coffee_average_price, coffee_change = coffee.data_coffee_table()
+# coffee_name, coffee_average_price, coffee_change = coffee.data_coffee_table()
 # gas
 gas_name, gas_price, gas_change = gas.data_gas_table()
 
@@ -134,11 +133,11 @@ for i in range(len(gold_name) - 2):
 
 
 # coffee
-for i in range(len(coffee_name) - 1):
-    coffee_data = {"average price": coffee_average_price[i], "change": coffee_change[i]}
-    database.child("PRICE").child(today).child("coffee").child(coffee_name[i]).set(
-        coffee_data
-    )
+# for i in range(len(coffee_name) - 1):
+#     coffee_data = {"average price": coffee_average_price[i], "change": coffee_change[i]}
+#     database.child("PRICE").child(today).child("coffee").child(coffee_name[i]).set(
+#         coffee_data
+#     )
 
 
 # gas
@@ -159,7 +158,7 @@ for i in range(len(talbe_price)):
 
 ##################Terms####################
 
-# # stock
+# stock
 # for i in list_data_terms:
 #     data_terms = {"terms": i[1], "type": i[2]}
 #     database.child("TERMS").child(i[0]).set(data_terms)
