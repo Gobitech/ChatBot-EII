@@ -19,7 +19,6 @@ from database import data_user
 
 user_name = "gobi1708"
 
-
 class ActionFuelPrice(Action):
     def name(self) -> Text:
         return "action_fuel_price"
@@ -67,38 +66,38 @@ class ActionFuelPrice(Action):
             )
 
 
-# class ActionCoffeePrice(Action):
-#     def name(self) -> Text:
-#         return "action_coffee_price"
+class ActionCoffeePrice(Action):
+    def name(self) -> Text:
+        return "action_coffee_price"
 
-#     def run(
-#         self,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: Dict[Text, Any],
-#     ) -> List[Dict[Text, Any]]:
-#         name_coffee = next(tracker.get_latest_entity_values("name_coffee"), None)
-#         day = next(tracker.get_latest_entity_values("day"), None)
-#         price = ""
-#         if day == "hôm qua":
-#             date = getdate.get_yesterday()
-#         else:
-#             date = getdate.get_today()
-#             day = "hôm nay"
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        name_coffee = next(tracker.get_latest_entity_values("name_coffee"), None)
+        day = next(tracker.get_latest_entity_values("day"), None)
+        price = ""
+        if day == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = getdate.get_today()
+            day = "hôm nay"
 
-#         try:
-#             price = getdata.get_price("coffee", name_coffee, date, "average price")
-#         except:
-#             print(name_coffee)
+        try:
+            price = getdata.get_price("coffee", name_coffee, date, "average price")
+        except:
+            print(name_coffee)
 
-#         if price:
-#             msg = f"giá cà phê {name_coffee} {day} ({date}) là {price} vnd 1kg"
-#             dispatcher.utter_message(text=msg)
+        if price:
+            msg = f"giá cà phê {name_coffee} {day} ({date}) là {price} vnd 1kg"
+            dispatcher.utter_message(text=msg)
 
-#         else:
-#             dispatcher.utter_message(
-#                 text=f"có vẻ bạn đang hỏi về cà phê, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !"
-#             )
+        else:
+            dispatcher.utter_message(
+                text=f"có vẻ bạn đang hỏi về cà phê, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !"
+            )
 
 
 class ActionTerm(Action):
@@ -179,8 +178,7 @@ class ActionMoney(Action):
 
         if status == None:
             text = (
-                "ngày "
-                + f"{day}, {name_product} có các loại giá sau: \n"
+                "ngày " + f"{day}, {name_product} có các loại giá sau: \n"
                 + "giá mua là "
                 + f"{Price} vnd."
                 + "\n"
@@ -266,78 +264,49 @@ class ActionGold(Action):
 
         if status and day_entity and name_product:
             if "mua" in status:
-                price = (
-                    price_buy_today
-                    if day == getdate.get_today()
-                    else price_buy_yesterday
-                )
+                price = price_buy_today if day == getdate.get_today() else price_buy_yesterday
                 text = (
-                    f"giá mua vàng "
-                    + name_product
-                    + " hôm "
-                    + f"{day} là "
-                    + f"{price},000 vnd."
-                    + "\n"
+                        f"giá mua vàng " + name_product + " hôm " + f"{day} là "
+                        + f"{price},000 vnd."
+                        + "\n"
                 )
-            else:
-                price = (
-                    price_sell_today
-                    if day == getdate.get_today()
-                    else price_sell_yesterday
-                )
+            else :
+                price = price_sell_today if day == getdate.get_today() else price_sell_yesterday
                 text = (
-                    f"giá bán vàng "
-                    + name_product
-                    + " hôm "
-                    + f"{day} là "
-                    + f"{price},000 vnd."
-                    + "\n"
+                        f"giá bán vàng " + name_product + " hôm " + f"{day} là "
+                        + f"{price},000 vnd."
+                        + "\n"
                 )
         elif status and name_product:
             price = price_buy_today if "mua" in status else price_sell_today
             t = "mua" if "mua" in status else "bán"
             text = (
-                f"giá {t} vàng "
-                + name_product
-                + " hôm "
-                + f"{day} là "
-                + f"{price},000 vnd."
-                + "\n"
+                    f"giá {t} vàng " + name_product + " hôm " + f"{day} là "
+                    + f"{price},000 vnd."
+                    + "\n"
             )
         elif name_product:
             price_b = price_buy_today
             price_s = price_sell_today
             if day == getdate.get_today():
                 text = (
-                    f"giá mua vàng "
-                    + name_product
-                    + " hôm nay "
-                    + f"({day}) là "
-                    + f"{price_b},000 vnd."
-                    + "\n"
-                    + f"giá bán vàng "
-                    + name_product
-                    + " hôm nay "
-                    + f"({day}) là "
-                    + f"{price_s},000 vnd."
-                    + "\n"
+                        f"giá mua vàng " + name_product + " hôm nay " + f"({day}) là "
+                        + f"{price_b},000 vnd."
+                        + "\n"
+                        + f"giá bán vàng " + name_product + " hôm nay " + f"({day}) là "
+                        + f"{price_s},000 vnd."
+                        + "\n"
                 )
-            else:
+            else :
                 price_b = price_buy_yesterday
                 price_s = price_sell_yesterday
                 text = (
-                    f"giá mua vàng "
-                    + name_product
-                    + " hôm qua "
-                    + f"({day}) là "
-                    + f"{price_b},000 vnd."
-                    + "\n"
-                    + f"giá bán vàng "
-                    + name_product
-                    + " hôm qua "
-                    + f"({day}) là "
-                    + f"{price_s},000 vnd."
-                    + "\n"
+                        f"giá mua vàng " + name_product + " hôm qua " + f"({day}) là "
+                        + f"{price_b},000 vnd."
+                        + "\n"
+                        + f"giá bán vàng " + name_product + " hôm qua " + f"({day}) là "
+                        + f"{price_s},000 vnd."
+                        + "\n"
                 )
         dispatcher.utter_message(text)
 
@@ -358,9 +327,7 @@ class ActionAnaly(Action):
         stock = None
         date = next(tracker.get_latest_entity_values("day"), None)
         try:
-            gold = next(
-                tracker.get_latest_entity_values("name_jenewry_summarize"), None
-            )
+            gold = next(tracker.get_latest_entity_values("name_jenewry_summarize"), None)
         except:
             print("Not gold!")
         try:
@@ -541,6 +508,7 @@ class ActionSubsistence(Action):
             print("problem with money!")
             return
         if food != None:
+
             data_user.updata_user(
                 user_name, data_user.StrToDate(date).month, date, "food_section", money
             )
@@ -550,6 +518,7 @@ class ActionSubsistence(Action):
                 + " vào danh sách chi tiêu cho thực phẩm"
             )
         elif hous != None:
+
             data_user.updata_user(
                 user_name,
                 data_user.StrToDate(date).month,
@@ -563,6 +532,7 @@ class ActionSubsistence(Action):
                 + " vào danh sách chi tiêu cho sinh hoạt"
             )
         elif recreation != None:
+
             data_user.updata_user(
                 user_name,
                 data_user.StrToDate(date).month,
@@ -912,7 +882,6 @@ class ActionTotalMonth(Action):
         dispatcher.utter_message(text)
         return
 
-
 class ActionStatistic(Action):
     def name(self) -> Text:
         return "action_Statistical"
@@ -927,45 +896,22 @@ class ActionStatistic(Action):
         mon = data_user.StrToDate(mon).month
 
         if next(tracker.get_latest_entity_values("food"), None):
-            data = {
-                "title": f"Phân bổ chi tiêu cho việc ăn uống tháng {mon}/2022",
-                "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
-                "backgroundColor": [
-                    "#36a2eb",
-                    "#ffcd56",
-                    "#ff6384",
-                    "#009688",
-                    "#c45850",
-                ],
-                "chartsData": data_user.statistical_month(user_name, mon),
-                "chartType": "scatter",
-                "displayLegend": "true",
-            }
+            data = {"title": f"Phân bổ chi tiêu cho việc ăn uống tháng {mon}/2022",
+                    "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
+                    "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"],
+                    "chartsData": data_user.statistical_month(user_name, mon), "chartType": "scatter",
+                    "displayLegend": "true"}
 
             message = {"payload": "chart", "data": data}
 
-            dispatcher.utter_message(
-                text="Đây là bảng phân bố chi tiêu của bạn", json_message=message
-            )
+            dispatcher.utter_message(text="Đây là bảng phân bố chi tiêu của bạn", json_message=message)
 
-        else:
-            data = {
-                "title": f"Phân bổ chi tiêu tháng {mon}/2022",
-                "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
-                "backgroundColor": [
-                    "#36a2eb",
-                    "#ffcd56",
-                    "#ff6384",
-                    "#009688",
-                    "#c45850",
-                ],
-                "chartsData": data_user.statistical_month(user_name, mon),
-                "chartType": "doughnut",
-                "displayLegend": "true",
-            }
+        else :
+            data = {"title": f"Phân bổ chi tiêu tháng {mon}/2022", "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
+                    "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"],
+                    "chartsData": data_user.statistical_month(user_name, mon), "chartType": "doughnut", "displayLegend": "true"}
 
             message = {"payload": "chart", "data": data}
 
-        dispatcher.utter_message(
-            text="Đây là bảng phân bố chi tiêu của bạn", json_message=message
-        )
+        dispatcher.utter_message(text="Đây là bảng phân bố chi tiêu của bạn", json_message=message)
+

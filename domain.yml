@@ -13,15 +13,16 @@ intents:
   - fuel_price
   - money_price
   - supply_contact_info
-  # - Coffee_price
+  - Coffee_price
   - Terms
   - Summarize
-  # - Subsistence
-  # - Total_money
-  # - Salary
-  # - Total_money_month
-  # - Total_money_day
-  # - Statistical
+  - Subsistence
+  - Total_money
+  - Salary
+  - Total_money_month
+  - Total_money_day
+  - Statistical
+
 
 entities:
   - name_fuel
@@ -36,56 +37,57 @@ entities:
   - name_coffee
   - terms
   - name_analyse
-  # - food_section
-  # - housing_section
-  # - recreation_section
-  # - personal_section
-  # - money
-  # - m_money
-  # - k_money
-  # - b_money
-  # - food
-  # - housing
-  # - recreation
-  # - personal
+  - food_section
+  - housing_section
+  - recreation_section
+  - personal_section
+  - money
+  - m_money
+  - k_money
+  - b_money
+  - food
+  - housing
+  - recreation
+  - personal
   - status
-  # - month
-  # - salary_money
-  # - year
-  # - name_product
-  # - name_meat
-  # - name_stock
-  # - name_jenewry_summarize
-  # - chart
+  - month
+  - salary_money
+  - year
+  - name_product
+  - name_meat
+  - name_stock
+  - name_jenewry_summarize
+  - chart
 
 responses:
   utter_greet:
-    - text: "Em chào anh(chị) ạ. \nEm là EII, em có thể giúp được gì cho anh(chị)"
+  - text: "Em chào anh(chị) ạ. \nEm là Hannah, em có thể giúp được gì cho anh(chị)"
 
   utter_goodbye:
-    - text: "Hẹn gặp lại anh chị ạ"
-    - text: "Bye anh (chị)"
+  - text: "Hẹn gặp lại anh chị ạ"
+  - text: "Bye anh (chị)"
 
   utter_affirm:
-    - text: "Em hiểu rồi. em có thể giúp gì tiếp cho anh chị"
+  - text: "Em hiểu rồi. em có thể giúp gì tiếp cho anh chị"
 
   utter_deny:
-    - text: "Em hiểu rồi. em có thể giúp gì tiếp cho anh chị"
+  - text: "Em hiểu rồi. em có thể giúp gì tiếp cho anh chị"
 
   utter_sorry:
-    - text: "Em xin lỗi vì không hiểu ạ"
+  - text: "Em xin lỗi vì không hiểu ạ"
 
   utter_iamabot:
-    - text: "Em là bot, tên em là EII"
+  - text: "Em là bot, tên em là hannah"
 
   utter_food_price:
-    - text: "Giá thịt hiện tại là 140.000/kg"
+  - text: "Giá thịt hiện tại là 140.000/kg"
+
 
   utter_menu:
-    - text: "Em có thể cho bạn biết giá, các thuật ngữ, các thứ về kinh tế, quản lý chi tiêu cá nhân của bạn,..."
+  - text: "Em có thể cho bạn biết giá, các thuật ngữ, các thứ về kinh tế, quản lý chi tiêu cá nhân của bạn,..."
 
   utter_Inflation:
-    - text: "Chứng khoán là một bằng chứng tài sản hoặc phần vốn của công ty hay tổ chức đã phát hành. Chứng khoán có thể là hình thức chứng chỉ, bút toán ghi sổ hay dữ liệu điện tử. Chứng khoán bao gồm các loại như cổ phiếu, trái phiếu, chứng chỉ quỹ và các hình thức khác"
+  - text: "Chứng khoán là một bằng chứng tài sản hoặc phần vốn của công ty hay tổ chức đã phát hành. Chứng khoán có thể là hình thức chứng chỉ, bút toán ghi sổ hay dữ liệu điện tử. Chứng khoán bao gồm các loại như cổ phiếu, trái phiếu, chứng chỉ quỹ và các hình thức khác"
 
 session_config:
   session_expiration_time: 60
@@ -107,8 +109,8 @@ actions:
   - action_term_explain
   - action_money_price
   - action_summarize_explain
-  # - action_Subsistence
-  # - action_Total_money
-  # - action_Total_money_month
-  # - action_Salary_money
-  # - action_Statistical
+  - action_Subsistence
+  - action_Total_money
+  - action_Total_money_month
+  - action_Salary_money
+  - action_Statistical

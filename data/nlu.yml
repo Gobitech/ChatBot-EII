@@ -167,6 +167,19 @@ nlu:
 
 - synonym: Dầu diesel
   examples: |
+    - dầu diesel
+    - dầu gazole 
+    - do
+    - dầu do
+    - DO 0,25%S
+    - DO 0,005%S
+    - do 0.25%s
+    - do 0.005%s
+
+- synonym: Dầu hỏa
+  examples: |
+    - dầu lửa 
+    - KO 
     - dầu kêrôsin
     - dầu KO 
     - coal oil
@@ -197,20 +210,7 @@ nlu:
     - a95 
     - mogas 95 
     - xăng
-    - xăng ron   - dầu diesel
-    - dầu gazole 
-    - do
-    - dầu do
-    - DO 0,25%S
-    - DO 0,005%S
-    - do 0.25%s
-    - do 0.005%s
-
-- synonym: Dầu hỏa
-  examples: |
-    - dầu lửa 
-    - KO 
- 
+    - xăng ron
 
 - intent: jenewry_price
   examples: |
@@ -692,7 +692,7 @@ nlu:
     - đô thụy điển
     
 - synonym: SGD
-  examples: |
+  examples: |    
     - Đồng Đô la Singapore 
     - Đô la Singapore
     - đô la sing
@@ -722,139 +722,139 @@ nlu:
     - usd dollar
     - đô la mỹ
 
-# - intent: Coffee_price
-#   examples: |
-#     - giá coffee [FOB](name_coffee) [hôm qua](day)
-#     - giá coffee [Gia Lai](name_coffee)
-#     - giá coffee [hồ tiêu](name_coffee)
-#     - giá coffee [Lâm Đồng](name_coffee) [hôm nay](day)
-#     - giá coffee [Đắk Lăk](name_coffee)
-#     - giá coffee [Đắk Nông](name_coffee)
-#     - giá cà phê [fob](name_coffee) [hôm qua](day)
-#     - giá cà phê [Gia lai](name_coffee)
-#     - giá cà phê [hồ tiêu](name_coffee)
-#     - giá cà phê [Lâm Đồng](name_coffee) [hôm nay](day)
-#     - giá cà phê [đắc lắc](name_coffee)
-#     - giá cà phê [Dak Nông](name_coffee)
-#     - giá cà phê [fob hcm](name_coffee) [hôm qua](day) bao nhiêu
-#     - giá cà phê [gia lai](name_coffee) bao nhiêu
-#     - giá cà phê [Hồ Tiêu](name_coffee) bao nhiêu
-#     - giá cà phê [Lâm đồng](name_coffee) bao nhiêu
-#     - giá cà phê [dac lac](name_coffee) bao nhiêu
-#     - giá cà phê [đắc nông](name_coffee) bao nhiêu
-#     - giá coffee [FOB HCM](name_coffee) bao nhiêu
-#     - giá coffee [gia lai](name_coffee) bao nhiêu
-#     - giá coffee [Hồ Tiêu](name_coffee) bao nhiêu
-#     - giá coffee [lâm đồng](name_coffee) bao nhiêu
-#     - giá coffee [đắk lắk](name_coffee) bao nhiêu
-#     - giá coffee [dac nong](name_coffee) bao nhiêu
-#     - giá cà phê [FOB](name_coffee) dao động bao nhiêu
-#     - giá cà phê [gia lai](name_coffee) dao động bao nhiêu
-#     - giá cà phê [Hồ Tiêu](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá cà phê [Lâm Đồng](name_coffee) dao động bao nhiêu
-#     - giá cà phê [Dak Lak](name_coffee) dao động bao nhiêu
-#     - giá cà phê [dac nông](name_coffee) dao động bao nhiêu
-#     - giá coffee [FOB](name_coffee) dao [hôm qua](day) động bao nhiêu
-#     - giá coffee [gia lai](name_coffee) dao động bao nhiêu
-#     - giá coffee [Hồ tiêu](name_coffee) dao động bao nhiêu
-#     - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
-#     - giá coffee [dak lak](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [dak nong](name_coffee) dao động bao nhiêu
-#     - giá coffee [dak lak](name_coffee) dao động bao nhiêu
-#     - giá coffee [đắc lắc](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [dac lac](name_coffee) bao nhiêu
-#     - giá coffee [đắk lắk](name_coffee)
-#     - giá coffee [đăk lăk](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [dak lak](name_coffee) [hôm nay](day)
-#     - giá coffee [gia lai](name_coffee) dao động bao nhiêu
-#     - giá coffee [gia lai](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [gia lai](name_coffee) bao nhiêu
-#     - giá coffee [gia lai](name_coffee)
-#     - giá coffee [gia lai](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [gia lai](name_coffee) [hôm nay](day)
-#     - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
-#     - giá coffee [lam dong](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [lâm đồng](name_coffee) bao nhiêu
-#     - giá coffee [lâm đồng](name_coffee)
-#     - giá coffee [lâm đồng](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [lâm đồng](name_coffee) [hôm nay](day)
-#     - giá coffee [hồ tiêu](name_coffee) dao động bao nhiêu
-#     - giá coffee [ho tieu](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [hồ tiêu](name_coffee) bao nhiêu
-#     - giá coffee [hồ tiêu](name_coffee)
-#     - giá coffee [ho tieu](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [hồ tiêu](name_coffee) [hôm nay](day)
-#     - giá coffee [dak nông](name_coffee) dao động bao nhiêu
-#     - giá coffee [đăk nông](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [đắk nông](name_coffee) bao nhiêu
-#     - giá coffee [đắc nông](name_coffee)
-#     - giá coffee [đăk nong](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [đắk nong](name_coffee) [hôm nay](day)
-#     - giá coffee [fob](name_coffee) dao động bao nhiêu
-#     - giá coffee [fob hcm](name_coffee) [hôm nay](day) dao động bao nhiêu
-#     - giá coffee [fob tp hcm](name_coffee) bao nhiêu
-#     - giá coffee [fob hồ chí minh](name_coffee)
-#     - giá coffee [fob tp hồ chí minh](name_coffee) [hôm nay](day)
-#     - cho tôi biết giá coffee [fob hồ chí minh](name_coffee) [hôm nay](day)
+- intent: Coffee_price
+  examples: |
+    - giá coffee [FOB](name_coffee) [hôm qua](day)
+    - giá coffee [Gia Lai](name_coffee)
+    - giá coffee [hồ tiêu](name_coffee)
+    - giá coffee [Lâm Đồng](name_coffee) [hôm nay](day)
+    - giá coffee [Đắk Lăk](name_coffee)
+    - giá coffee [Đắk Nông](name_coffee)
+    - giá cà phê [fob](name_coffee) [hôm qua](day)
+    - giá cà phê [Gia lai](name_coffee)
+    - giá cà phê [hồ tiêu](name_coffee)
+    - giá cà phê [Lâm Đồng](name_coffee) [hôm nay](day)
+    - giá cà phê [đắc lắc](name_coffee)
+    - giá cà phê [Dak Nông](name_coffee)
+    - giá cà phê [fob hcm](name_coffee) [hôm qua](day) bao nhiêu
+    - giá cà phê [gia lai](name_coffee) bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá cà phê [Lâm đồng](name_coffee) bao nhiêu
+    - giá cà phê [dac lac](name_coffee) bao nhiêu
+    - giá cà phê [đắc nông](name_coffee) bao nhiêu
+    - giá coffee [FOB HCM](name_coffee) bao nhiêu
+    - giá coffee [gia lai](name_coffee) bao nhiêu
+    - giá coffee [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá coffee [lâm đồng](name_coffee) bao nhiêu
+    - giá coffee [đắk lắk](name_coffee) bao nhiêu
+    - giá coffee [dac nong](name_coffee) bao nhiêu
+    - giá cà phê [FOB](name_coffee) dao động bao nhiêu
+    - giá cà phê [gia lai](name_coffee) dao động bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá cà phê [Lâm Đồng](name_coffee) dao động bao nhiêu
+    - giá cà phê [Dak Lak](name_coffee) dao động bao nhiêu
+    - giá cà phê [dac nông](name_coffee) dao động bao nhiêu
+    - giá coffee [FOB](name_coffee) dao [hôm qua](day) động bao nhiêu
+    - giá coffee [gia lai](name_coffee) dao động bao nhiêu
+    - giá coffee [Hồ tiêu](name_coffee) dao động bao nhiêu
+    - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
+    - giá coffee [dak lak](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [dak nong](name_coffee) dao động bao nhiêu
+    - giá coffee [dak lak](name_coffee) dao động bao nhiêu
+    - giá coffee [đắc lắc](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [dac lac](name_coffee) bao nhiêu
+    - giá coffee [đắk lắk](name_coffee)
+    - giá coffee [đăk lăk](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [dak lak](name_coffee) [hôm nay](day)
+    - giá coffee [gia lai](name_coffee) dao động bao nhiêu
+    - giá coffee [gia lai](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [gia lai](name_coffee) bao nhiêu
+    - giá coffee [gia lai](name_coffee)
+    - giá coffee [gia lai](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [gia lai](name_coffee) [hôm nay](day)
+    - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
+    - giá coffee [lam dong](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [lâm đồng](name_coffee) bao nhiêu
+    - giá coffee [lâm đồng](name_coffee)
+    - giá coffee [lâm đồng](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [lâm đồng](name_coffee) [hôm nay](day)
+    - giá coffee [hồ tiêu](name_coffee) dao động bao nhiêu
+    - giá coffee [ho tieu](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [hồ tiêu](name_coffee) bao nhiêu
+    - giá coffee [hồ tiêu](name_coffee)
+    - giá coffee [ho tieu](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [hồ tiêu](name_coffee) [hôm nay](day)
+    - giá coffee [dak nông](name_coffee) dao động bao nhiêu
+    - giá coffee [đăk nông](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [đắk nông](name_coffee) bao nhiêu
+    - giá coffee [đắc nông](name_coffee)
+    - giá coffee [đăk nong](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [đắk nong](name_coffee) [hôm nay](day)
+    - giá coffee [fob](name_coffee) dao động bao nhiêu
+    - giá coffee [fob hcm](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [fob tp hcm](name_coffee) bao nhiêu
+    - giá coffee [fob hồ chí minh](name_coffee)
+    - giá coffee [fob tp hồ chí minh](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [fob hồ chí minh](name_coffee) [hôm nay](day)
 
-# #- lookup: name_coffee
-# #  examples: |
-# #    - FOB
-# #    - Gia Lai
-# #    - Hồ Tiêu
-# #    - Lâm Đồng
-# #    - Đắk Lăk
-# #    - Đắk Nông
+#- lookup: name_coffee
+#  examples: |
+#    - FOB
+#    - Gia Lai
+#    - Hồ Tiêu
+#    - Lâm Đồng
+#    - Đắk Lăk
+#    - Đắk Nông
 
-# - synonym: Đắk Lăk
-#   examples: |
-#     - Dak Lak
-#     - dak lak 
-#     - đắk lắk
-#     - đắc lắc
-#     - dac lac
-#     - đăk lăk
+- synonym: Đắk Lăk
+  examples: |
+    - Dak Lak
+    - dak lak 
+    - đắk lắk
+    - đắc lắc
+    - dac lac
+    - đăk lăk
 
-# - synonym: Gia Lai
-#   examples: |
-#     - gia lai
-#     - Gia lai
+- synonym: Gia Lai
+  examples: |
+    - gia lai
+    - Gia lai
 
-# - synonym: Lâm Đồng
-#   examples: |
-#     - lâm đồng
-#     - Lâm đồng
-#     - lam dong
+- synonym: Lâm Đồng
+  examples: |
+    - lâm đồng
+    - Lâm đồng
+    - lam dong
 
-# - synonym: Hồ tiêu
-#   examples: |
-#     - Hồ Tiêu
-#     - hồ tiêu
-#     - ho tieu
+- synonym: Hồ tiêu
+  examples: |
+    - Hồ Tiêu
+    - hồ tiêu
+    - ho tieu
 
-# - synonym: Đắk Nông
-#   examples: |
-#     - Dak Nông
-#     - dak nong
-#     - dac nong
-#     - đắc nông
-#     - dac nông
-#     - đắc nong
-#     - dak nông
-#     - đăk nông
-#     - đắk nông
-#     - đắc nông
-#     - đăk nong
-#     - đắk nong
+- synonym: Đắk Nông
+  examples: |
+    - Dak Nông
+    - dak nong
+    - dac nong
+    - đắc nông
+    - dac nông
+    - đắc nong
+    - dak nông
+    - đăk nông
+    - đắk nông
+    - đắc nông
+    - đăk nong
+    - đắk nong
 
-# - synonym: FOB
-#   examples: |
-#     - fob
-#     - fob hcm
-#     - FOB HCM
-#     - fob tp hcm
-#     - fob hồ chí minh
-#     - fob tp hồ chí minh
+- synonym: FOB
+  examples: |
+    - fob
+    - fob hcm
+    - FOB HCM
+    - fob tp hcm
+    - fob hồ chí minh
+    - fob tp hồ chí minh
   
 - intent: Terms
   examples: |
@@ -1007,6 +1007,8 @@ nlu:
   examples: |
     - Tôi tên là [Thanh] (name). 
     - Tôi tên: [Đạt] (name) email: 
+    - Vâng. Tôi là [Hoàng] (name). 
+    - [Thái] (name),
     - Mình tên là [Thanh](name)
 
 - intent: Summarize
