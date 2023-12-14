@@ -26,47 +26,47 @@ rules:
 #   - intent: Coffee_price
 #   - action: action_coffee_price
 
-# - rule: tra loi gia ngoai te
-#   steps:
-#   - intent: money_price
-#   - action: action_money_price
+- rule: tra loi gia ngoai te
+  steps:
+  - intent: money_price
+  - action: action_money_price
 
-# - rule: tra loi cau hoi dinh nghia tai chinh
-#   steps:
-#   - intent: Terms
-#   - action: action_term_explain
+- rule: tra loi cau hoi dinh nghia tai chinh
+  steps:
+  - intent: Terms
+  - action: action_term_explain
 
-# - rule: tra loi cau hoi phan tich gia
-#   steps:
-#   - intent: Summarize
-#   - action: action_summarize_explain
+- rule: tra loi cau hoi phan tich gia
+  steps:
+  - intent: Summarize
+  - action: action_summarize_explain
 
-# - rule: nhap thong tin su dung tien
-#   steps:
-#   - intent: Subsistence
-#   - action: action_Subsistence
+- rule: nhap thong tin su dung tien
+  steps:
+  - intent: Subsistence
+  - action: action_Subsistence
 
-# - rule: hoi thong tin su dung tien
-#   steps:
-#   - intent: Total_money
-#   - action: action_Total_money
+- rule: hoi thong tin su dung tien
+  steps:
+  - intent: Total_money
+  - action: action_Total_money
 
-# - rule: hoi thong tin su dung tien theo ngay
-#   steps:
-#   - intent: Total_money_day
-#   - action: action_Total_money
+- rule: hoi thong tin su dung tien theo ngay
+  steps:
+  - intent: Total_money_day
+  - action: action_Total_money
 
-# - rule: hoi thong tin su dung tien theo thang
-#   steps:
-#   - intent: Total_money_month
-#   - action: action_Total_money_month
+- rule: hoi thong tin su dung tien theo thang
+  steps:
+  - intent: Total_money_month
+  - action: action_Total_money_month
 
-# - rule: xem du lieu chi tieu
-#   steps:
-#   - intent: Statistical
-#   - action: action_Statistical
+- rule: xem du lieu chi tieu
+  steps:
+  - intent: Statistical
+  - action: action_Statistical
 
-# - rule: nhập lương
-#   steps:
-#   - intent: Salary
-#   - action: action_Salary_money
+- rule: nhập lương
+  steps:
+  - intent: Salary
+  - action: action_Salary_money
