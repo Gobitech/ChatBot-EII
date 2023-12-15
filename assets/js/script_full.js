@@ -12,8 +12,10 @@ const rasa_server_url = "http://localhost:5005/webhooks/rest/webhook";
 //const rasa_server_url = `http://${IP}/webhooks/rest/webhook`;
 //const handoff_server_url = `http://${IP}/webhooks/rest/webhook`; // UNUSED Human handoff
 
-const botPic  = "https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972";
-const userPic = "https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436185.jpg?w=826&t=st=1672645915~exp=1672646515~hmac=50c51931ba6d2e845462d4f5d123b0f3a0353cef3e4516da801e97894b037897";
+// const botPic  = "https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972";
+const botPic = "https://cdn3.iconfinder.com/data/icons/chat-bot-emoji-blue-filled-color/300/14134081Untitled-3-4096.png";
+// const userPic = "https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436185.jpg?w=826&t=st=1672645915~exp=1672646515~hmac=50c51931ba6d2e845462d4f5d123b0f3a0353cef3e4516da801e97894b037897";
+const userPic = "https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833572.jpg?w=740&t=st=1702639969~exp=1702640569~hmac=428a6eb1243d4b5039e9a1935e1af485a3963fb6644bfa284712989bd33181b7";
 
 const action_name = "action_utter_greet";
 const sender_id = "W-" + uuidv4();

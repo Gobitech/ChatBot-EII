@@ -15,7 +15,12 @@ body {
     font-size: 14px;
     color: #4d4b4b;
     line-height: 1.6;
-background: #d9a7c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #04befe;
+background: -webkit-linear-gradient(to left, #fffcdc, #4481eb); 
+background: linear-gradient(to top, #fffcdc 0%, #4481eb 100%);
 }
+/* background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); */
+/* background: #1DA7EC;  
+background: -webkit-linear-gradient(to left, #fffcdc, #1DA7EC);  
+background: linear-gradient(to top, #fffcdc, #1DA7EC);  */

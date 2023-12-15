@@ -16,8 +16,10 @@
 
 .chat_header {
   height: 60px;
-background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e6f, #f80759);
-
+/* background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e6f, #f80759); */
+background: #1DA7EC;
+background: linear-gradient(147deg, #1DA7EC, #203098);
+/* background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); */
   text-align: center;
   border-radius: 10px 10px 0px 0px;
   padding: 10px;
@@ -91,7 +93,8 @@ div.chats::-webkit-scrollbar {
 
 .botMsg, .botTyping {
   float: left;
-  background: #FAF7F0;
+  /* background: #FAF7F0; */
+  background: whitesmoke;
   color: #000000;
   margin-left: 0.5em;
   border-radius: 5px 20px 20px 20px;
@@ -99,7 +102,9 @@ div.chats::-webkit-scrollbar {
 
 .userMsg {
   float: right;
-background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e6f, #f80759);
+/* background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e6f, #f80759); */
+/* background-image: linear-gradient(to right top, #00c6fb 0%, #005bea 100%); */
+background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 
 
 
@@ -137,7 +142,8 @@ background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e
   text-align: center;
   font-size: 25px;
   cursor: pointer;
-  color: #f80759;
+  /* color: #f80759; */
+  color: #1CA7EC;
   transform: translate(0, 25%);
 }
 
@@ -181,7 +187,8 @@ background-image: linear-gradient(to right top, #bc4e9c, #cf4191, #e03182, #ee1e
 .dropdown-content li > a,
 .dropdown-content li > span {
   cursor: pointer;
-  color: #E0144C;
+  /* color: #E0144C; */
+  color: #1CA7EC;
 }
 
 @keyframes animateElement {
