@@ -896,7 +896,7 @@ class ActionStatistic(Action):
         mon = data_user.StrToDate(mon).month
 
         if next(tracker.get_latest_entity_values("food"), None):
-            data = {"title": f"Phân bổ chi tiêu cho việc ăn uống tháng {mon}/2022",
+            data = {"title": f"Phân bổ chi tiêu cho việc ăn uống tháng {mon}/2023",
                     "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
                     "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"],
                     "chartsData": data_user.statistical_month(user_name, mon), "chartType": "scatter",
@@ -907,7 +907,7 @@ class ActionStatistic(Action):
             dispatcher.utter_message(text="Đây là bảng phân bố chi tiêu của bạn", json_message=message)
 
         else :
-            data = {"title": f"Phân bổ chi tiêu tháng {mon}/2022", "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
+            data = {"title": f"Phân bổ chi tiêu tháng {mon}/2023", "labels": ["ăn uống", "mua sắm", "giải trí", "sinh hoạt"],
                     "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"],
                     "chartsData": data_user.statistical_month(user_name, mon), "chartType": "doughnut", "displayLegend": "true"}
 

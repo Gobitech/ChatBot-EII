@@ -61,7 +61,7 @@ entities:
 
 responses:
   utter_greet:
-  - text: "Em chào anh(chị) ạ. \nEm là Hannah, em có thể giúp được gì cho anh(chị)"
+  - text: "Em chào anh(chị) ạ. \nEm là EII, em có thể giúp được gì cho anh(chị)"
 
   utter_goodbye:
   - text: "Hẹn gặp lại anh chị ạ"
@@ -77,7 +77,7 @@ responses:
   - text: "Em xin lỗi vì không hiểu ạ"
 
   utter_iamabot:
-  - text: "Em là bot, tên em là hannah"
+  - text: "Em là bot, tên em là EII"
 
   utter_food_price:
   - text: "Giá thịt hiện tại là 140.000/kg"
